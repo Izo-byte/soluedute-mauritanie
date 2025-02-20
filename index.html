@@ -49,27 +49,7 @@
       margin-bottom: 20px;
     }
 
-    .whatsapp-button {
-      display: inline-block;
-      text-decoration: none;
-      background-color: #25D366;
-      color: white;
-      padding: 12px 20px;
-      border-radius: 5px;
-      font-size: 16px;
-      margin-top: 10px;
-      transition: background-color 0.3s ease, transform 0.2s;
-      cursor: pointer;
-      border: none;
-    }
-
-    .whatsapp-button:hover {
-      background-color: #1da851;
-      transform: scale(1.05);
-    }
-
     .consultant-list {
-      display: none;
       margin-top: 20px;
     }
 
@@ -130,11 +110,9 @@
   <div class="container">
     <img src="images.png" alt="SoluEtude Logo" class="logo">
     <h1>SOLUETUDE MAURITANIE</h1>
-    <h2>Discuter avec un consultant</h2>
+    <h2>Contactez un consultant</h2>
 
-    <button id="showConsultants" class="whatsapp-button">📩 Choisir un consultant</button>
-
-    <div id="consultantList" class="consultant-list">
+    <div class="consultant-list">
       <div class="consultant" onclick="openWhatsApp('22241910305')">
         <img src="images.png" alt="Tacko Dieng">
         <div class="consultant-info">
@@ -158,12 +136,6 @@
   </div>
 
   <script>
-    // Fonction pour afficher/masquer la liste des consultants
-    document.getElementById('showConsultants').addEventListener('click', () => {
-      const consultantList = document.getElementById('consultantList');
-      consultantList.style.display = (consultantList.style.display === 'block') ? 'none' : 'block';
-    });
-
     // Fonction pour ouvrir WhatsApp avec un message personnalisé
     function openWhatsApp(phone) {
       const message = encodeURIComponent(`Bonjour, je suis [Votre Nom].\nJe souhaite obtenir des informations sur mon orientation.\nJe suis actuellement en [classe ou niveau d'études] et je souhaite [précisez votre projet].\nPouvez-vous m'aider à mieux choisir ma formation ?`);
