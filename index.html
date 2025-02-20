@@ -60,6 +60,7 @@
       margin-top: 10px;
       transition: background-color 0.3s ease;
       cursor: pointer;
+      border: none;
     }
 
     .whatsapp-button:hover {
@@ -136,20 +137,20 @@
     <!-- Liste des consultants (masquée par défaut) -->
     <div id="consultantList" class="consultant-list">
       <!-- Tacko Dieng -->
-      <div class="consultant" onclick="window.open('https://wa.me/22241910305?text=Bonjour%2C%20je%20suis%20%5BVotre%20Nom%5D.%0AJe%20souhaite%20obtenir%20des%20informations%20sur%20mon%20orientation.%0AJe%20suis%20actuellement%20en%20%5Bclasse%20ou%20niveau%20d'études%5D%20et%20je%20souhaite%20%5Bprécisez%20votre%20projet%5D.%0APouvez-vous%20m'aider%20%C3%A0%20mieux%20choisir%20ma%20formation%20%3F', '_blank')">
-        <img src="tacko.jpg" alt="Tacko Dieng">
+      <div class="consultant" onclick="window.location.href='https://wa.me/22241910305?text=Bonjour%2C%20je%20suis%20%5BVotre%20Nom%5D.%0AJe%20souhaite%20obtenir%20des%20informations%20sur%20mon%20orientation.%0AJe%20suis%20actuellement%20en%20%5Bclasse%20ou%20niveau%20d'études%5D%20et%20je%20souhaite%20%5Bprécisez%20votre%20projet%5D.%0APouvez-vous%20m'aider%20%C3%A0%20mieux%20choisir%20ma%20formation%20%3F'">
+        <img src="images.png" alt="Tacko Dieng">
         <div class="consultant-info">
           <span>Tacko Dieng</span>
-          <small>Consultante et spécialiste en orientation scolaire</small>
+          <small>Spécialiste en orientation post-bac</small>
         </div>
       </div>
 
       <!-- Beydi Sy -->
-      <div class="consultant" onclick="window.open('https://wa.me/22230623004?text=Bonjour%2C%20je%20suis%20%5BVotre%20Nom%5D.%0AJe%20souhaite%20obtenir%20des%20informations%20sur%20mon%20orientation.%0AJe%20suis%20actuellement%20en%20%5Bclasse%20ou%20niveau%20d'études%5D%20et%20je%20souhaite%20%5Bprécisez%20votre%20projet%5D.%0APouvez-vous%20m'aider%20%C3%A0%20mieux%20choisir%20ma%20formation%20%3F', '_blank')">
-        <img src="beydi.jpg" alt="Beydi Sy">
+      <div class="consultant" onclick="window.location.href='https://wa.me/22230623004?text=Bonjour%2C%20je%20suis%20%5BVotre%20Nom%5D.%0AJe%20souhaite%20obtenir%20des%20informations%20sur%20mon%20orientation.%0AJe%20suis%20actuellement%20en%20%5Bclasse%20ou%20niveau%20d'études%5D%20et%20je%20souhaite%20%5Bprécisez%20votre%20projet%5D.%0APouvez-vous%20m'aider%20%C3%A0%20mieux%20choisir%20ma%20formation%20%3F'">
+        <img src="images.png" alt="Beydi Sy">
         <div class="consultant-info">
           <span>Beydi Sy</span>
-          <small>Consultant et spécialiste en orientation scolaire</small>
+          <small>Expert en admissions et mobilité</small>
         </div>
       </div>
     </div>
@@ -168,7 +169,4 @@
       if (consultantList.style.display === 'none' || consultantList.style.display === '') {
         consultantList.style.display = 'block'; // Afficher la liste
       } else {
-        consultantList.style.display = 'none'; // Masquer la liste
-      }
-    });
-  </
+        consultantList.style.display = '
