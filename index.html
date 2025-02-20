@@ -3,18 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SOLUETUDE MAURITANIE</title>
+  <title>SOLUETUDE MAURITANIE - Orientation Scolaire</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
   <style>
-    /* Reset CSS */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
     }
 
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f1f1f1;
+      background-color: #f4f4f4;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -23,83 +23,154 @@
     }
 
     .container {
-      background-color: #ffffff;
-      border-radius: 10px;
+      background-color: #fff;
+      border-radius: 12px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
       padding: 30px;
-      max-width: 400px;
+      max-width: 420px;
       width: 100%;
       text-align: center;
     }
 
+    .logo {
+      width: 120px;
+      margin-bottom: 15px;
+    }
+
     h1 {
-      font-size: 28px;
-      color: #262626;
-      margin-bottom: 20px;
+      font-size: 26px;
+      color: #2c3e50;
+      margin-bottom: 10px;
     }
 
     h2 {
-      font-size: 20px;
-      color: #262626;
-      margin-bottom: 30px;
+      font-size: 18px;
+      color: #34495e;
+      margin-bottom: 20px;
     }
 
-    .consultant-link {
-      display: block;
+    .whatsapp-button {
+      display: inline-block;
       text-decoration: none;
-      color: #ffffff;
-      background-color: #28ce53;
-      padding: 15px;
+      background-color: #25D366;
+      color: white;
+      padding: 10px 15px;
       border-radius: 5px;
-      margin-bottom: 15px;
-      transition: background-color 0.3s ease, transform 0.3s ease;
-    }
-
-    .consultant-link:hover {
-      background-color: #1fa84a;
-      transform: translateY(-2px);
-    }
-
-    .consultant-link.secondary {
-      background-color: #167b6b;
-    }
-
-    .consultant-link.secondary:hover {
-      background-color: #115c4f;
-    }
-
-    .consultant-link span {
-      display: block;
-      font-size: 16px;
-      font-weight: bold;
-    }
-
-    .consultant-link small {
-      display: block;
       font-size: 14px;
-      opacity: 0.8;
+      margin-top: 10px;
+      transition: background-color 0.3s ease;
+      cursor: pointer;
+    }
+
+    .whatsapp-button:hover {
+      background-color: #1da851;
+    }
+
+    .consultant-list {
+      display: none; /* Masqué par défaut */
+      margin-top: 20px;
+    }
+
+    .consultant {
+      display: flex;
+      align-items: center;
+      background: #f9f9f9;
+      padding: 12px;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      transition: transform 0.2s ease;
+      cursor: pointer;
+    }
+
+    .consultant:hover {
+      transform: translateY(-3px);
+    }
+
+    .consultant img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      margin-right: 12px;
+    }
+
+    .consultant-info {
+      flex: 1;
+      text-align: left;
+    }
+
+    .consultant-info span {
+      font-size: 16px;
+      font-weight: 600;
+      color: #2c3e50;
+    }
+
+    .consultant-info small {
+      font-size: 13px;
+      color: #7f8c8d;
+    }
+
+    .footer {
+      margin-top: 20px;
+      font-size: 13px;
+      color: #7f8c8d;
+    }
+
+    .footer a {
+      color: #2c3e50;
+      text-decoration: none;
+      font-weight: 600;
     }
   </style>
 </head>
 <body>
+
   <div class="container">
+    <img src="logo.png" alt="SoluEtude Logo" class="logo">
     <h1>SOLUETUDE MAURITANIE</h1>
-    <h2>Discuter avec un de nos consultants</h2>
+    <h2>Discuter avec un consultant</h2>
 
-    <!-- Lien WhatsApp pour Tacko Dieng -->
-    <a href="https://wa.me/22241910305?text=Bonjour%2C%20je%20suis%20%5BVotre%20Nom%5D.%0AJe%20souhaite%20obtenir%20des%20informations%20sur%20mon%20orientation.%0AJe%20suis%20actuellement%20en%20%5Bclasse%20ou%20niveau%20d'études%5D%20et%20je%20souhaite%20%5Bprécisez%20votre%20projet%5D.%0APouvez-vous%20m'aider%20%C3%A0%20mieux%20choisir%20ma%20formation%20%3F" 
-      class="consultant-link">
-      <span>Tacko Dieng</span>
-      <small>Cliquez pour discuter sur WhatsApp</small>
-    </a>
+    <!-- Bouton WhatsApp pour afficher la liste des consultants -->
+    <button id="showConsultants" class="whatsapp-button">📩 Choisir un consultant</button>
 
-    <!-- Lien WhatsApp pour Beydi Sy -->
-    <a href="https://wa.me/22230623004?text=Bonjour%2C%20je%20suis%20%5BVotre%20Nom%5D.%0AJe%20souhaite%20obtenir%20des%20informations%20sur%20mon%20orientation.%0AJe%20suis%20actuellement%20en%20%5Bclasse%20ou%20niveau%20d'études%5D%20et%20je%20souhaite%20%5Bprécisez%20votre%20projet%5D.%0APouvez-vous%20m'aider%20%C3%A0%20mieux%20choisir%20ma%20formation%20%3F" 
-      class="consultant-link secondary">
-      <span>Beydi Sy</span>
-      <small>Cliquez pour discuter sur WhatsApp</small>
-    </a>
+    <!-- Liste des consultants (masquée par défaut) -->
+    <div id="consultantList" class="consultant-list">
+      <!-- Tacko Dieng -->
+      <div class="consultant" onclick="window.open('https://wa.me/22241910305?text=Bonjour%2C%20je%20suis%20%5BVotre%20Nom%5D.%0AJe%20souhaite%20obtenir%20des%20informations%20sur%20mon%20orientation.%0AJe%20suis%20actuellement%20en%20%5Bclasse%20ou%20niveau%20d'études%5D%20et%20je%20souhaite%20%5Bprécisez%20votre%20projet%5D.%0APouvez-vous%20m'aider%20%C3%A0%20mieux%20choisir%20ma%20formation%20%3F', '_blank')">
+        <img src="tacko.jpg" alt="Tacko Dieng">
+        <div class="consultant-info">
+          <span>Tacko Dieng</span>
+          <small>Spécialiste en orientation post-bac</small>
+        </div>
+      </div>
 
+      <!-- Beydi Sy -->
+      <div class="consultant" onclick="window.open('https://wa.me/22230623004?text=Bonjour%2C%20je%20suis%20%5BVotre%20Nom%5D.%0AJe%20souhaite%20obtenir%20des%20informations%20sur%20mon%20orientation.%0AJe%20suis%20actuellement%20en%20%5Bclasse%20ou%20niveau%20d'études%5D%20et%20je%20souhaite%20%5Bprécisez%20votre%20projet%5D.%0APouvez-vous%20m'aider%20%C3%A0%20mieux%20choisir%20ma%20formation%20%3F', '_blank')">
+        <img src="beydi.jpg" alt="Beydi Sy">
+        <div class="consultant-info">
+          <span>Beydi Sy</span>
+          <small>Expert en admissions et mobilité</small>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      © 2025 SoluEtude | <a href="#">Mentions légales</a> | <a href="#">Contact</a>
+    </div>
   </div>
+
+  <script>
+    // JavaScript pour afficher/masquer la liste des consultants
+    const showConsultantsButton = document.getElementById('showConsultants');
+    const consultantList = document.getElementById('consultantList');
+
+    showConsultantsButton.addEventListener('click', () => {
+      if (consultantList.style.display === 'none' || consultantList.style.display === '') {
+        consultantList.style.display = 'block'; // Afficher la liste
+      } else {
+        consultantList.style.display = 'none'; // Masquer la liste
+      }
+    });
+  </script>
+
 </body>
 </html>
